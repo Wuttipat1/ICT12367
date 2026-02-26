@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บันทึกข้อมูลพนักงาน</title>
+    <style>
+        /* ตั้งค่าพื้นหลังของทั้งหน้าจอ */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2eded; /* สีพื้นหลังอมชมพูเทาตามรูป */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* กล่องสีขาวของฟอร์ม */
+        .form-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px; /* ความโค้งมนของขอบกล่อง */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ใส่เงาให้กล่องดูนูนขึ้น */
+            width: 100%;
+            max-width: 450px; /* กำหนดความกว้างสูงสุด */
+            box-sizing: border-box;
+        }
+
+        /* หัวข้อ */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* ส่วนจัดระเบียบแต่ละช่องกรอก */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* ตัวอักษรหัวข้อช่องกรอก */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        /* ปรับแต่งช่อง Input และ Select */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px; /* ขอบโค้งมนตามรูป */
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        /* เมื่อคลิกที่ช่องกรอก */
+        input:focus, select:focus {
+            border-color: #28a745;
+        }
+
+        /* ปุ่ม Submit */
+        .btn-submit {
+            width: 100%;
+            background-color: #28a745; /* สีเขียวตามภาพ */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        /* เมื่อเอาเมาส์ไปวางบนปุ่ม */
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>บันทึกข้อมูลบุคคล</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position</label>
+                <select id="position" name="position">
+                    <option value="manager">Student</option>
+                    <option value="developer">Teacher</option>
+                    <option value="designer">Manager</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
